@@ -33,6 +33,14 @@ final class FirstViewController: UIViewController {
 
 
 
+// 改善点
+
+// delegateにprivateをつける
+// 仮に途中でdelegateの値が変わった時の挙動が変わってくる
+//var delegate: AppDelegate {
+//    UIApplication.shared.delegate as! AppDelegate
+//}
+
 // 解答例
 
 // UserDefaultsを使用したやり方はコメントアウト
