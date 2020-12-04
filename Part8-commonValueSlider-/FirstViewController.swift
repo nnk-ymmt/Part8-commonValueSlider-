@@ -36,10 +36,13 @@ final class FirstViewController: UIViewController {
 // 改善点
 
 // delegateにprivateをつける
-// 仮に途中でdelegateの値が変わった時の挙動が変わってくる
-//var delegate: AppDelegate {
-//    UIApplication.shared.delegate as! AppDelegate
-//}
+// letだとVCのインスタンスが生成された時点でのdelegateの値で初期化されるが
+// computed varの場合は使った時点でのdelegateの値を常に取得できる
+// UIApplication.shared.delegate = nilとした場合
+// let delegate = UIApplication.shared.delegate as! AppDelegateの場合はnilにならないが
+// var delegate: AppDelegate {
+//     UIApplication.shared.delegate as! AppDelegate
+// } の場合はnilになる為、宣言の仕方で挙動が変わってくる
 
 // 解答例
 
